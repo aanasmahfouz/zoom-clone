@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-dark-1: #1c1f2e;
+  --color-dark-2: #161925;
+  --color-dark-3: #252a41;
+  --color-dark-4: #1e2757;
+
+  --color-blue-1: #0e78f9;
+
+  --color-sky-1: #c9ddff;
+  --color-sky-2: #ecf0ff;
+  --color-sky-3: #f5fcff;
+
+  --color-orange-1: #ff742e;
+  --color-purple-1: #830ef9;
+  --color-yellow-1: #f9a90e;
+
+  --background-image-hero: url("/images/hero-background.png");
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@layer utilities {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* ======== stream css overrides ======== */
+  .str-video__call-stats {
+    max-width: 500px;
+    position: relative;
+  }
+
+  .str-video__speaker-layout__wrapper {
+    max-height: 700px;
+  }
+
+  .str-video__participant-details {
+    color: white;
+  }
+
+  .str-video__menu-container {
+    color: white;
+  }
+
+  .str-video__notification {
+    color: white;
+  }
+
+  .str-video__participant-list {
+    background-color: #1c1f2e;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    height: 100%;
+  }
+
+  .str-video__call-controls__button {
+    height: 40px;
+  }
+
+  .glassmorphism {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  .glassmorphism2 {
+    background: rgba(18, 17, 17, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+@utility container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+@media (width >= theme(--breakpoint-2xl)) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+}
+
+/* ==== clerk class override ===== */
+
+.cl-userButtonPopoverActionButtonIcon {
+  color: white;
+}
+
+.cl-logoBox {
+  height: 40px;
+}
+.cl-dividerLine {
+  background: #252a41;
+  height: 2px;
+}
+
+.cl-socialButtonsIconButton {
+  border: 3px solid #565761;
+}
+
+.cl-internal-wkkub3 {
+  color: white;
+}
+.cl-userButtonPopoverActionButton {
+  color: white;
+}
+
+.cl-providerIcon__github {
+  filter: invert(1);
+}
+
+/* animation */
+
+.show-block {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  animation: show 0.7s forwards linear;
+}
+
+@keyframes show {
+  0% {
+    animation-timing-function: ease-in;
+    width: 0%;
+  }
+
+  100% {
+    animation-timing-function: ease-in;
+    width: 100%;
+  }
+}
