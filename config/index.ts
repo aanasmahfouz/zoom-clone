@@ -40,10 +40,10 @@ export const siteConfig: Metadata = {
   ] as Array<string>,
   authors: {
     name: "Sanidhya Kumar Verma",
-    url: "https://github.com/sanidhyy",
+    url: "https://github.com/cybernigttt",
   },
 } as const;
 
 export const links = {
-  sourceCode: "https://github.com/sanidhyy/zoom-clone",
+  sourceCode: "https://github.com/cybernigttt/zoom-clone",
 } as const;
