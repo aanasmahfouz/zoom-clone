@@ -9,11 +9,10 @@
     "lint": "next lint"
   },
   "author": {
-    "name": "Sanidhya Kumar Verma",
-    "email": "sanidhya.verma12345@gmail.com",
-    "url": "https://github.com/sanidhyy"
+    "name": "Anas Mahfouz",
+    "url": "https://github.com/aanasmahfouz"
   },
-  "description": "Modern Next.js powered Video calling app",
+  "description": "High-performance real-time video conferencing platform built with Next.js 15, React 19, TypeScript, Stream Video SDK, and Clerk Authentication.",
   "keywords": [
     "reactjs",
     "nextjs",
@@ -52,12 +51,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sanidhyy/zoom-clone.git"
+    "url": "https://github.com/aanasmahfouz/zoom-clone.git"
   },
-  "homepage": "https://github.com/sanidhyy/zoom-clone#readme",
+  "homepage": "https://github.com/aanasmahfouz/zoom-clone#readme",
   "bugs": {
-    "url": "https://github.com/sanidhyy/zoom-clone/issues",
-    "email": "sanidhya.verma12345@gmail.com"
+    "url": "https://github.com/aanasmahfouz/zoom-clone/issues"
   },
   "funding": [
     {

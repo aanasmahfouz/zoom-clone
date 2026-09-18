@@ -34,7 +34,7 @@ const PersonalRoomPage = () => {
   const meetingId = user?.id;
   const { call } = useGetCallById(meetingId!);
 
-  if (!user || !user?.username || !user?.id || !isLoaded) return <Loader />;
+  if (!user || !user?.id || !isLoaded) return <Loader />;
 
   const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${meetingId}?personal=true`;
 
@@ -59,7 +59,7 @@ const PersonalRoomPage = () => {
 
       <div className="flex w-full flex-col gap-8 xl:max-w-[900px]">
         <Table title="Meeting ID" description={meetingId!} />
-        <Table title="Topic" description={`${user?.username}'s Meeting Room`} />
+        <Table title="Topic" description={`${user?.fullName || user?.username || user?.firstName || "Personal"}'s Meeting Room`} />
         <Table title="Invite link" description={meetingLink} />
       </div>
 

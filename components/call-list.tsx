@@ -42,7 +42,7 @@ export const CallList = ({ type }: CallListType) => {
   const getNoCallsMessage = () => {
     switch (type) {
       case "ended":
-        return "No previoud calls.";
+        return "No previous calls.";
 
       case "recordings":
         return "No recordings.";
