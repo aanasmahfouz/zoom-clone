@@ -91,14 +91,14 @@ flowchart TD
         Recordings["Cloud Media & Recordings Storage"]
     end
 
-    UI -->|1. Authenticate Request| ClerkAuth
-    ClerkAuth -->|2. Validated Session Token| UI
-    UI -->|3. Request Stream Token| ServerAction
-    ServerAction -->|4. Sign Token using Secret Key| NodeSDK
-    NodeSDK -->|5. Return 1-Hour Ephemeral JWT| UI
-    StreamSDK -->|6. Connect Real-Time Audio/Video (WebRTC)| SFU
-    SFU -->|7. Fetch Stored Recordings| Recordings
-    Recordings -->|8. Playback URL| Hook
+    UI -->|"1. Authenticate Request"| ClerkAuth
+    ClerkAuth -->|"2. Validated Session Token"| UI
+    UI -->|"3. Request Stream Token"| ServerAction
+    ServerAction -->|"4. Sign Token using Secret Key"| NodeSDK
+    NodeSDK -->|"5. Return 1-Hour Ephemeral JWT"| UI
+    StreamSDK -->|"6. Connect Real-Time Audio/Video via WebRTC"| SFU
+    SFU -->|"7. Fetch Stored Recordings"| Recordings
+    Recordings -->|"8. Playback URL"| Hook
 ```
 
 ---
